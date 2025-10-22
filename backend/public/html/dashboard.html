@@ -1,0 +1,56 @@
+<!DOCTYPE HTML5>
+
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="/asset/css/web3.css" type="text/css"
+	</head>
+
+	<style>
+		.pink-bg {
+			background-color: #cc5d5d;
+		}
+		.bttn {
+			background: #1d54bc;
+			border-radius: 10px;
+			box-shadow: 5px 5px 5 5 #0a1d41;
+			/* border: 1px solid white; */
+			padding: 10px;
+			width:200px;
+			text-align: center;
+			color:white;
+		}
+
+		.bttn:hover {
+			cursor: pointer;
+			background: #5a88de;
+			transition: 0.2s ease-in-out;
+		}
+
+		.bttn.magenta {
+			background: #e10fac !important;
+		}
+	</style>
+
+	<script>
+		let gate = false;
+
+		$(document).ready(function(){
+			$("#color-changing-bttn").click(function(){
+				if (gate) {
+					document.body.style.backgroundColor = "#ccffff";
+				} else {
+					document.body.style.backgroundColor = "#ccff00";
+				}
+				gate = !gate;
+				console.log("Color has been changed to cyan");
+				$("#hideable").hide();
+			});
+		});
+	</script>
+
+	<body class="pink-bg">
+		Successfully loggedin
+	</body>
+</html>

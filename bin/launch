@@ -2,8 +2,8 @@
 
 HOST="127.0.0.1"
 DB="keiser"
-USER="teacher"
-PASSWORD="password"
+USER="josephbender"
+PASSWORD="applesaucedolphin"
 DB_PORT="5432"
 
 export HOST
@@ -13,4 +13,4 @@ export USER
 export PASSWORD
 export DB_PORT
 
-fastapi run main.py
+fastapi run "backend/main.py"

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML5>
+
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="/asset/css/web3.css" type="text/css"
+	</head>
+
+	<style>
+		.pink-bg {
+			background-color: #cc5d5d;
+		}
+		.bttn {
+			background: #1d54bc;
+			border-radius: 10px;
+			box-shadow: 5px 5px 5 5 #0a1d41;
+			/* border: 1px solid white; */
+			padding: 10px;
+			width:200px;
+			text-align: center;
+			color:white;
+		}
+
+		.bttn:hover {
+			cursor: pointer;
+			background: #5a88de;
+			transition: 0.2s ease-in-out;
+		}
+
+		.bttn.magenta {
+			background: #e10fac !important;
+		}
+	</style>
+
+	<script>
+		let gate = false;
+
+		$(document).ready(function(){
+			$("#color-changing-bttn").click(function(){
+				if (gate) {
+					document.body.style.backgroundColor = "#ccffff";
+				} else {
+					document.body.style.backgroundColor = "#ccff00";
+				}
+				gate = !gate;
+				console.log("Color has been changed to cyan");
+				$("#hideable").hide();
+			});
+
+			// let el = document.createElement("ul");
+			// let li = document.createElement("li");
+			// li.innerHTML = "<h1>Apple</h1>";
+			// let li2 = document.createElement("li");
+			// li2.innerText = "<h1>Banana</h1>";
+			// el.appendChild(li);
+			// el.appendChild(l2);
+			// document.body.appendChild(el);
+
+			// function pollState () {
+			// 	if (state != oldState) {
+			// 		generateNewCode()
+			// 		executeFunction()
+			// 	}
+			// }
+
+			// let interval = 1000;
+
+			// setInterval(() => {
+			// 	pollState();
+			// }, interval);
+
+			// <ul>
+			// <li>
+			// <h1>Apple</h1>
+			// </li>
+			// <li>"<h1>Banana</h1>"</l1>
+		});
+	</script>
+
+	<body class="pink-bg">
+		<header></header>
+		<main>
+			<H1>W1D1 Live Demo</h1>
+			<p id="hideable">Hello world. I am on host {{ host }}. Welcome to FastAPI</p>
+			<div id="color-changing-bttn" class="bttn">Click Me!</div>
+
+			<div style="padding:20px;">
+				<a href="/signup" class="bttn magenta">Signup</a>
+				<a href="/login" class="bttn magenta">Login</a>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>
